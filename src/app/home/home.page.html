@@ -1,20 +1,59 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>ダッシュボード</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content class="ion-padding">
+  <!-- ダッシュボードのヘッダー -->
+  <div class="dashboard-header">
+    <h2>こんにちは、ユーザーさん！</h2>
+    <p>アプリの概要をご確認ください。</p>
   </div>
+
+  <!-- サマリーセクション -->
+  <div class="dashboard-summary">
+    <div>
+      <h4>総売上</h4>
+      <p>¥120,000</p>
+    </div>
+    <div>
+      <h4>新しい注文</h4>
+      <p>35</p>
+    </div>
+    <div>
+      <h4>ユーザー</h4>
+      <p>1,024</p>
+    </div>
+  </div>
+
+  <!-- グリッドに並べたカード -->
+  <div class="grid-container">
+    <div class="card">
+      <div class="card-icon">
+        <ion-icon name="cart-outline"></ion-icon>
+      </div>
+      <h3>新しい注文</h3>
+      <p>本日 12 件</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">
+        <ion-icon name="people-outline"></ion-icon>
+      </div>
+      <h3>新規ユーザー</h3>
+      <p>今週 45 人</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">
+        <ion-icon name="cash-outline"></ion-icon>
+      </div>
+      <h3>売上</h3>
+      <p>¥50,000</p>
+    </div>
+  </div>
+
+  <!-- ボタン -->
+  <button ion-button full (click)="onButtonClick()">詳細を見る</button>
 </ion-content>
